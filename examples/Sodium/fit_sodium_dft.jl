@@ -4,14 +4,13 @@ using InteratomicPotentials, InteratomicBasisPotentials
 using CairoMakie
 using JLD
 using DPP
-push!(Base.LOAD_PATH, dirname(@__DIR__))
 using PotentialLearning
 
 #################### Importing Data ###################
 # Import Raw Data
 
 # Import configurations 
-ds, thermo = load_data("examples/Sodium/data/liquify_sodium.yaml", YAML(u"eV", u"Å"));
+ds, thermo = load_data("examples/Sodium/data/liquify_sodium.yaml", YAML(:Na, u"eV", u"Å"));
 ds, thermo = ds[220:end], thermo[220:end];
 systems = get_system.(ds);
 

@@ -5,6 +5,7 @@ Manifest.toml
 *.jld
 *.npz
 *.ace
+.vscode*
 # generated docs
 docs/build/
 docs/src/generated/
