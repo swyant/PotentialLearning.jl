@@ -52,7 +52,7 @@ lb, Σ = learn!(lb, ds_train[dpp_inds]; α = 1e-6)
 # Train Errors 
 train_features = sum.(get_values.(get_local_descriptors.(ds_train)))
 ê = dot.(train_features, (lb.β,) ./ 108.0)
-e_true_train = get_values.(get_energy.(ds_train))
+e_true_train = get_values.(get_energy.(ds_train)) ./ 108.0
 errors_train = (ê - e_true_train)
 rel_errors_train = errors_train ./ e_true_train
 describe(100.0 .* rel_errors_train)
@@ -60,7 +60,7 @@ describe(100.0 .* rel_errors_train)
 # Test Errors
 test_features = sum.(get_values.(get_local_descriptors.(ds_test)))
 ê = dot.(test_features, (lb.β,) ./ 108.0)
-e_true_test = get_values.(get_energy.(ds_test))
+e_true_test = get_values.(get_energy.(ds_test)) ./108.0
 errors_test = (ê - e_true_test)
 rel_errors_test = errors_test ./ e_true_test
 describe(100.0 .* rel_errors_test)
