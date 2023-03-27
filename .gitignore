@@ -11,7 +11,3 @@ Manifest.toml
 docs/build/
 docs/src/generated/
 
-# data too large for github
-examples/aHfO2/
-
-
