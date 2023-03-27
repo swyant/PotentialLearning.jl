@@ -124,3 +124,5 @@ Activate and instantiate
     pkg> activate .
     pkg> instantiate
 ```
+
+### Quick check
