@@ -5,9 +5,12 @@ Manifest.toml
 *.jld
 *.npz
 *.ace
+,vscode/*
 # generated docs
 docs/build/
 docs/src/generated/
 
 # data too large for github
 examples/aHfO2/
+
+
