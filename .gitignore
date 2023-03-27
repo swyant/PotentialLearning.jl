@@ -5,7 +5,7 @@ Manifest.toml
 *.jld
 *.npz
 *.ace
-,vscode/
+.vscode/
 
 # generated docs
 docs/build/
